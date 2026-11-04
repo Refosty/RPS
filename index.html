@@ -7,6 +7,10 @@
 
     <script>
 
+
+        const humanScore = 0;
+        const computerScore = 0;
+
             function getComputerChoice(){
 
                 const options = ["Rock", "Paper", "Scissors"];
@@ -23,6 +27,22 @@
                 return humanInput;
 
             }
+
+            function playRound(humanChoice, computerChoice){
+
+                if(humanChoice == 'Rock' && computerChoice == 'scissors')
+                    console.log("You win!")
+                    humanScore ++;
+                else if(himanChoice =="Rock")
+                
+                
+
+            }
+
+            const humanChoice = getHumanChoice;
+            const computerChoice = getComputerChoice;
+
+            
 
     </script>
 
