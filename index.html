@@ -30,17 +30,18 @@
 
             function playRound(humanChoice, computerChoice){
 
-                if(humanChoice == 'Rock' && computerChoice == 'scissors')
+                if (humanChoice === computerChoice)
+                {
                     console.log("You win!")
-                    humanScore ++;
-                else if(himanChoice =="Rock")
-                
-                
-
+                    humanScore++;
+                }
             }
 
             const humanChoice = getHumanChoice;
             const computerChoice = getComputerChoice;
+
+            playRound(humanChoice, computerChoice)
+            
 
             
 
