@@ -8,8 +8,8 @@
     <script>
 
 
-        const humanScore = 0;
-        const computerScore = 0;
+        let humanScore = 0;
+        let computerScore = 0;
 
             function getComputerChoice(){
 
@@ -17,30 +17,48 @@
 
                 const choice = options[Math.floor(Math.random() * options.length)];
                 
-                    return choice;
+                    return choice.toLowerCase();
             }
 
             function getHumanChoice(){
 
                const humanInput = prompt("Rock Paper or Scissors?")
 
-                return humanInput;
+                return humanInput.toLowerCase();
 
             }
 
             function playRound(humanChoice, computerChoice){
 
+
                 if (humanChoice === computerChoice)
                 {
-                    console.log("You win!")
+                    console.log("You Tie!")
+                    console.log("Your Score: " + humanScore)
+                    console.log("Computer Score: " + computerScore)
+                }
+                else if (humanChoice === "Rock" && computerChoice === "Scissors" || humanChoice === "Paper" && computerChoice === "Rock" || humanChoice === "Scissors" && computerChoice === "Paper"){
+
+                    console.log("You Win!")
                     humanScore++;
+                    console.log("Your Score: " + humanScore)
+                    console.log("Computer Score: " + computerScore)
+                }
+                else{
+
+                    console.log("You Loose!")
+                    computerScore++;
+                    console.log("Your Score: " + humanScore)
+                    console.log("Computer Score: " + computerScore)
                 }
             }
 
-            const humanChoice = getHumanChoice;
-            const computerChoice = getComputerChoice;
+
+            const humanChoice = getHumanChoice();
+            const computerChoice = getComputerChoice();
 
             playRound(humanChoice, computerChoice)
+            
             
 
             
