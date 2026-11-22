@@ -4,66 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <script>
-
-
-        let humanScore = 0;
-        let computerScore = 0;
-
-            function getComputerChoice(){
-
-                const options = ["Rock", "Paper", "Scissors"];
-
-                const choice = options[Math.floor(Math.random() * options.length)];
-                
-                    return choice.toLowerCase();
-            }
-
-            function getHumanChoice(){
-
-               const humanInput = prompt("Rock Paper or Scissors?")
-
-                return humanInput.toLowerCase();
-
-            }
-
-            function playRound(humanChoice, computerChoice){
-
-
-                if (humanChoice === computerChoice)
-                {
-                    console.log("You Tie!")
-                    console.log("Your Score: " + humanScore)
-                    console.log("Computer Score: " + computerScore)
-                }
-                else if (humanChoice === "Rock" && computerChoice === "Scissors" || humanChoice === "Paper" && computerChoice === "Rock" || humanChoice === "Scissors" && computerChoice === "Paper"){
-
-                    console.log("You Win!")
-                    humanScore++;
-                    console.log("Your Score: " + humanScore)
-                    console.log("Computer Score: " + computerScore)
-                }
-                else{
-
-                    console.log("You Loose!")
-                    computerScore++;
-                    console.log("Your Score: " + humanScore)
-                    console.log("Computer Score: " + computerScore)
-                }
-            }
-
-
-            const humanChoice = getHumanChoice();
-            const computerChoice = getComputerChoice();
-
-            playRound(humanChoice, computerChoice)
-            
-            
-
-            
-
-    </script>
+    <script src="getChoice.js"></script>
+    <script src="play.js"></script>ß
 
 </head>
 <body>
